@@ -1,0 +1,95 @@
+.how {
+    &__title{
+        line-height: 1;
+        font-size: 111px;
+        margin-bottom: 50px;
+        @include breakpoint(xl,max) {
+            font-size: 70px;
+            margin-bottom: 40px;
+        }
+        @include breakpoint(lg,max) {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        @include breakpoint(md,max) {
+            font-size: 50px;
+        }
+    }
+    &__subtitle{
+        @include breakpoint(md,max) {
+            br{
+                display: none;
+            }
+        }
+    }
+    &__row {
+        display: flex;
+        gap: 30px;
+        margin-top: 105px;
+        @include breakpoint(xl,max) {
+            margin-top: 70px;
+        }
+        @include breakpoint(lg,max) {
+            margin-top: 50px;
+            flex-direction: column;
+        }
+    }
+    &__item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        @include breakpoint(lg,max) {
+            flex-direction: row;
+            border: 3px solid $color_dark;
+            padding: 30px;
+            border-radius: 16px;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        @include breakpoint(sm,max) {
+            flex-direction: column;
+        }
+    }
+    &__item-icon {
+        img{
+            display: block;
+        }
+        @include breakpoint(xl,max) {
+            max-width: 85px;
+        }
+        @include breakpoint(lg,max) {
+            max-width: initial;
+            flex: 0 0 96px;
+        }
+    }
+    &__item-content{
+        
+        @include breakpoint(lg,max) {
+            text-align: left;
+        }
+    }
+    &__item-title {
+        font-size: 35px;
+        margin-top: 35px;
+        @include breakpoint(xl,max) {
+            font-size: 26px;
+            margin-top: 20px;
+        }
+        @include breakpoint(lg,max) {
+            line-height: 1;
+            font-size: 22px;
+            margin-top: 0;
+        }
+    }
+    &__item-description {
+        margin-top: 15px;
+        font-size: 18px;
+        line-height: 1.7;
+        @include breakpoint(xl,max) {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    }
+}

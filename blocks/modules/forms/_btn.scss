@@ -1,0 +1,58 @@
+.btn{
+    display: inline-flex;
+    align-items: center;
+    padding: 21px;
+    background-color: $color_red;
+    color: $color_white;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 900;
+    gap: 15px;
+    border-radius: 50px;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .2s;
+    @include breakpoint(xl,max) {
+        padding: 16px;
+        font-size: 20px;
+    }
+    @include breakpoint(md,max) {
+        gap: 10px;
+        padding: 14px;
+        font-size: 20px;
+        color: $color_dark;
+        min-width: 46px;
+    }
+    b{
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    span{
+        padding-left: 10px;
+        &~svg{
+            margin-right: 10px;
+        }
+    }
+    svg{
+        stroke: currentColor;
+        stroke-width: 2px;
+        @include breakpoint(lg,max) {
+            width: 20px;
+            height: 20px;
+        }
+        @include breakpoint(md,max) {
+            width: 18px;
+            height: 18px;
+            stroke-width: 3px;
+        }
+    }
+    &:hover{
+        color: #000;
+        svg{
+        }
+    }
+}

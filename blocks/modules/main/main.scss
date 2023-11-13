@@ -1,0 +1,65 @@
+.main{
+    width: 100%;
+    max-width: 766px;
+    margin: 0 auto;
+    padding: 60px 0;
+    @include breakpoint(xl,max) {
+        max-width: 640px;
+    }
+    @include breakpoint(lg,max) {
+        padding: 40px 0;
+        
+    }
+    @include breakpoint(md,max) {
+        max-width: 440px;
+    }
+    @include breakpoint(sm,max) {
+        max-width: 340px;
+    }
+    &__texts{
+        font-weight: 900;
+        font-size: 120px;
+        line-height: 1;
+        @include breakpoint(xl,max) {
+            font-size: 100px;
+        }
+        @include breakpoint(md,max) {
+            font-size: 80px;
+        }
+        @include breakpoint(sm,max) {
+            font-size: 60px;
+            padding: 0 15px;
+        }
+    }
+    &__text{
+    }
+    &__description{
+        margin-top: 40px;
+        br{
+            @include breakpoint(sm,max) {
+                display: none;
+            }
+        }
+    }
+    &__bottom{
+        margin-top: 50px;
+        @include breakpoint(sm,max) {
+            margin-top: 40px;
+        }
+    }
+    &__line{
+        position: absolute;
+        left: 100%;
+        bottom: 10px;
+        transform: translateX(-154px);
+        width: 454px;
+        @include breakpoint(xl,max) {
+            transform: translateX(-124px);
+            width: 380px;
+            bottom: 0;
+        }
+        @include breakpoint(md,max) {
+            display: none;
+        }
+    }
+}

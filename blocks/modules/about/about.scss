@@ -1,0 +1,78 @@
+.about{
+    &:after,
+    &:before{
+        content: '';
+        width: 530px;
+        height: 530px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: #fff;
+        opacity: 0.15;
+        filter: blur(152px);
+        pointer-events: none;
+    }
+    &:before{
+        top: 0;
+        left: 0;
+        transform: translate(-40%,-40%);
+    }
+    &:after{
+        bottom: 0;
+        right: 0;
+        transform: translate(40%,40%);
+    }
+    &__title{
+        border-left: 10px solid $color_red;
+        padding-left: 30px;
+        @include breakpoint(lg,max) {
+            border-left-width: 6px;
+            padding-left: 20px;
+        }
+        small{
+            display: block;
+            font-size: 20px;
+            margin-bottom: 10px;
+            @include breakpoint(lg,max) {
+                font-size: 18px;
+            }
+        }
+    }
+    &__columns{
+        display: flex;
+        gap: 100px;
+        margin-top: 50px;
+        @include breakpoint(xl,max) {
+            gap: 50px;
+        }
+        @include breakpoint(lg,max) {
+            gap: 30px;
+        }
+        @include breakpoint(md,max) {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+    &__text{
+        flex: 1;
+        @include breakpoint(lg,max) {
+            font-size: 16px;
+        }
+    }
+    &__bottom{
+        margin-top: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        @include breakpoint(lg,max) {
+            margin-top: 45px;
+        }
+    }
+    &__bottom-text{
+        font-weight: 900;
+        font-size: 25px;
+        @include breakpoint(lg,max) {
+            font-size: 20px;
+        }
+    }
+}
